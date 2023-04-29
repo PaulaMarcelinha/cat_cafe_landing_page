@@ -8,8 +8,11 @@
 }
 
 body {
-    background-color: black;
+    background-image: url('images/bgpaw.png');
+    background-repeat: space;
 }
+
+/* NAVIGATION BAR*/
 
 li, a, button {
     font-family: "Macondo", sans-serif;
@@ -17,6 +20,15 @@ li, a, button {
     font-size: 16px;
     color: palevioletred;
     text-decoration: none;
+    transition: transform .3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.2);
+}
+
+button:hover {
+    transform: scale(1.2);
 }
 
 header {
@@ -58,3 +70,36 @@ header {
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
+
+
+
+/* DIALOG BOX/POPUP MODAL */
+
+.btModal {
+    padding: 32px 64px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0%;
+    text-align: center;
+    transition: transform .3s ease-in-out, opacity .4s ease;
+    transform: translate(-50%, -100%);
+}
+
+
+.btModal p {
+    margin-bottom: 24px;
+}
+
+.btModal.show {
+    opacity: 100%;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
