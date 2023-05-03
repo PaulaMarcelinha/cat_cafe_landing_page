@@ -103,3 +103,27 @@ header {
     transform: translate(-50%, -50%);
 }
 
+/* INTRODUCTION CONTAINER */
+.welcontainer {
+    display: flex;
+    flex-wrap: wrap;  /* places containers underneath, when browser is smaller */
+    align-items: center;
+    background-color: rgba(39, 217, 245, 0.22);
+  
+  }
+  
+  .intro {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .imgcontainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cafe-img {
+    object-fit: cover;
+    max-width: 700px;
+  }
