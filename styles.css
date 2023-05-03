@@ -14,7 +14,7 @@ body {
 
 /* NAVIGATION BAR*/
 
-li, a, button {
+nav li, header a, header button {
     font-family: "Macondo", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -23,11 +23,11 @@ li, a, button {
     transition: transform .3s ease-in-out;
 }
 
-li:hover {
+nav li:hover {
     transform: scale(1.2);
 }
 
-button:hover {
+header button:hover {
     transform: scale(1.2);
 }
 
@@ -107,23 +107,79 @@ header {
 .welcontainer {
     display: flex;
     flex-wrap: wrap;  /* places containers underneath, when browser is smaller */
-    align-items: center;
+    align-items: center; /* aligns divs inside in the center*/
     background-color: rgba(39, 217, 245, 0.22);
-  
+    width: 80%;  
+    justify-content: space-evenly;
+    margin: 10px auto;
   }
   
   .intro {
     flex: 1;
     text-align: center;
   }
+
+  .intro h1 {
+    font-family: "Macondo", sans-serif;
+    font-weight: 1000;
+    font-size: 50px;
+  }
   
+  .intro p {
+    font-family: "Macondo", sans-serif;
+    font-weight: 1000;
+    font-size: 18px;
+  }
   .imgcontainer {
     flex: 1;
     display: flex;
     justify-content: center;
+    position: relative;
+    display: inline-block;
   }
-  
-  .cafe-img {
+  .imgcontainer .cafeoverlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .imgcontainer:hover .cafeoverlay {
+    display: inline;
+    transform: scale(1.1);
+  }
+
+
+  .cafe-img, .cafeoverlay {
     object-fit: cover;
-    max-width: 700px;
+    max-width: 500px;
+  }
+
+  .booktablebtn {
+    margin-top: 10px;
+    padding: 15px 25px;
+    background-color: white;
+    border-color: lightblue;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  /* Cat Roles */
+
+  .kittyteam {
+    margin: 10px auto;
+    border: 10px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  .cat {
+    max-width: 150px;
+    max-height: 150px;
+
   }
