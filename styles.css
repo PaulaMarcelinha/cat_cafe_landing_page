@@ -215,3 +215,41 @@ header {
     opacity: 0.8;
   }
   
+
+
+/* CAT QUOTE GENERATOR */
+
+.quotebox {   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(39, 217, 245, 0.25);
+  width: 75%;  
+  height: 150px;
+  margin: 50px auto;
+}
+
+
+.quotebtn {
+     margin-top: 1px;
+     margin-right: 2px;
+     position:absolute;
+     top:0;
+     left:0;
+    border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.clickpaw {
+     margin-top: 1px;
+     margin-right: 2px;
+     position:absolute;
+     top: 1;
+     left: 0;
+}
+
+.paw {
+  height: 50px;
+}
