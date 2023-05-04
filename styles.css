@@ -138,6 +138,7 @@ header {
     justify-content: center;
     position: relative;
     display: flex;
+    height: 500px;
   }
 
   .innerimages{
@@ -150,26 +151,29 @@ header {
   
   .innerimages .cafeoverlay {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
     z-index: 2;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .innerimages .cafe-img {
     transition: transform 0.5s ease-in-out;
   }
 
   
   .innerimages:hover .cafe-img {
     display: none;
-  }
+  } 
 
   .innerimages:hover .cafeoverlay {
     display: inline-block;
+    transform: scale(1.2);
   }
 
 
   .cafe-img, .cafeoverlay {
     object-fit: cover;
-    max-width: 500px;
+    max-height: 400px;
+    transition: transform 0.5s ease-in-out;
   }
 
   .booktablebtn {
