@@ -90,6 +90,7 @@ header {
     text-align: center;
     transition: transform .3s ease-in-out, opacity .4s ease;
     transform: translate(-50%, -100%);
+    z-index: 99;
 }
 
 
@@ -108,10 +109,10 @@ header {
     display: flex;
     flex-wrap: wrap;  /* places containers underneath, when browser is smaller */
     align-items: center; /* aligns divs inside in the center*/
-    background-color: rgba(39, 217, 245, 0.22);
+    background-color: rgba(39, 217, 245, 0.5);
     width: 80%;  
-    justify-content: space-evenly;
-    margin: 10px auto;
+    justify-content: center;
+    margin: 50px auto;
   }
   
   .intro {
@@ -130,25 +131,39 @@ header {
     font-weight: 1000;
     font-size: 18px;
   }
+
   .imgcontainer {
     flex: 1;
     display: flex;
     justify-content: center;
     position: relative;
-    display: inline-block;
+    display: flex;
   }
-  .imgcontainer .cafeoverlay {
+
+  .innerimages{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .innerimages .cafeoverlay {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 2;
     transition: transform 0.5s ease-in-out;
   }
 
-  .imgcontainer:hover .cafeoverlay {
-    display: inline;
-    transform: scale(1.1);
+  
+  .innerimages:hover .cafe-img {
+    display: none;
+  }
+
+  .innerimages:hover .cafeoverlay {
+    display: inline-block;
   }
 
 
@@ -179,7 +194,6 @@ header {
   }
 
   .cat {
-    max-width: 150px;
-    max-height: 150px;
+    max-height: 250px;
 
   }

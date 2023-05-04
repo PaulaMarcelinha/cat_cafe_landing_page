@@ -16,3 +16,4 @@ Interior Design Cat - https://unsplash.com/photos/7E9qvMOsZEM?utm_source=unsplas
 TO DO
 /// fix background for the welcome , evenly in the middle 
 change font of the 2nd button and add some hover animation
+fix modal to go over the photo - fixed using z-index
