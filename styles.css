@@ -251,5 +251,5 @@ header {
 }
 
 .paw {
-  height: 55px;
+  max-height: 55px;
 }
